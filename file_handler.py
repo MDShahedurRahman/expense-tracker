@@ -8,3 +8,8 @@ def load_expenses():
             return json.load(f)
     except FileNotFoundError:
         return []
+
+
+def save_expenses(expenses):
+    with open(DATA_FILE, "w") as f:
+        json.dump(expenses, f, indent=4)
