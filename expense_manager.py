@@ -3,6 +3,9 @@ from utils import generate_id, validate_amount, validate_date
 
 
 def add_expense(expenses, title, amount, category, date):
+    if not validate_amount(amount):
+        raise ValueError("Invalid amount")
+
     expense_id = generate_id(expenses)
     expense = Expense(expense_id, title, amount, category, date)
     expenses.append(expense.to_dict())
