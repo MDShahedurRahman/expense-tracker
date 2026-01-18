@@ -16,3 +16,13 @@ def add_expense(expenses, title, amount, category, date):
 
 def delete_expense(expenses, expense_id):
     return [e for e in expenses if e["expense_id"] != expense_id]
+
+
+def update_expense(expenses, expense_id, title=None, amount=None):
+    for e in expenses:
+        if e["expense_id"] == expense_id:
+            if title:
+                e["title"] = title
+            if amount and validate_amount(amount):
+                e["amount"] = amount
+    return expenses
