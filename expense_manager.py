@@ -26,3 +26,7 @@ def update_expense(expenses, expense_id, title=None, amount=None):
             if amount and validate_amount(amount):
                 e["amount"] = amount
     return expenses
+
+
+def get_all_expenses(expenses):
+    return expenses
