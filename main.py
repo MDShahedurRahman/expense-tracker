@@ -7,6 +7,7 @@ def main():
     expenses = load_expenses()
     expenses = add_expense(expenses, "Lunch", 12.5, "Food", "2026-01-15")
     save_expenses(expenses)
+    print("Total:", total_expenses(expenses))
 
 
 if __name__ == "__main__":
