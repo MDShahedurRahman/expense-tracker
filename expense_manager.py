@@ -12,3 +12,7 @@ def add_expense(expenses, title, amount, category, date):
     expense = Expense(expense_id, title, amount, category, date)
     expenses.append(expense.to_dict())
     return expenses
+
+
+def delete_expense(expenses, expense_id):
+    return [e for e in expenses if e["expense_id"] != expense_id]
