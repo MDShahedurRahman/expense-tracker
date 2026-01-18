@@ -7,3 +7,7 @@ def expenses_by_category(expenses):
     for e in expenses:
         report[e["category"]] = report.get(e["category"], 0) + e["amount"]
     return report
+
+
+def expenses_by_date(expenses, date):
+    return [e for e in expenses if e["date"] == date]
