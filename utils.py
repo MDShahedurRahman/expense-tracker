@@ -12,3 +12,9 @@ def validate_date(date_str):
         return True
     except ValueError:
         return False
+
+
+def generate_id(expenses):
+    if not expenses:
+        return 1
+    return max(e["expense_id"] for e in expenses) + 1
