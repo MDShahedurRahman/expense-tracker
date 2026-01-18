@@ -1,5 +1,4 @@
 class Expense:
-
     def __init__(self, expense_id, title, amount, category, date):
         self.expense_id = expense_id
         self.title = title
@@ -15,3 +14,13 @@ class Expense:
             "category": self.category,
             "date": self.date
         }
+
+    @staticmethod
+    def from_dict(data):
+        return Expense(
+            data["expense_id"],
+            data["title"],
+            data["amount"],
+            data["category"],
+            data["date"]
+        )
