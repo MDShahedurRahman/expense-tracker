@@ -4,6 +4,7 @@ from report import total_expenses
 
 
 def main():
+    expenses = load_expenses()
 
 
 if __name__ == "__main__":
